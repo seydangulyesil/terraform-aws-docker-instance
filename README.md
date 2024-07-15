@@ -14,6 +14,13 @@ provider "aws" {
 
 module "docker_instance" {
     source = "seydangulyesil/docker-instance/aws"
-    key_name = "your-key-name"
+    key_name = "your_key_name"
+
+    # Optional variables with default values (uncomment to override defaults)
+    # docker_instance_ports = [22, 80, 8080]
+    # instance_type         = "t2.micro"
+    # num_of_instance       = 1
+    # server_name           = "docker-instance"
+    # tag                   = "Docker-Instance"
 }
 ```
